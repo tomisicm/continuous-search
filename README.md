@@ -1,6 +1,6 @@
-# shameless
+# Contious Search
 
-For the lazy ones who are looking to speed up the application process.
+For the ones who are looking to speed up the application process.
 
 ## prerequisite:
 ### install latex
