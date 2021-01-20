@@ -1,0 +1,12 @@
+cls/*
+/cls/*
+./cls/*
+*.log
+*.pdf
+cls/
+.vscode
+*.pdf
+*.out
+*.aux
+/__pycache__
+.vscode

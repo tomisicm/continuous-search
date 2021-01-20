@@ -1,0 +1,3 @@
+id,company,position,seniority,technology,salary,location,url,email,sentAt,fileLocation
+12,Company A,Senior Frontend Engineer,senior,"['javascript', 'reactjs', 'vue.js', 'svelte', 'linux']",,,https://url.com//jobs/401723/senior-frontend-engineer-ofload,,,
+13,Company B,Medior NodeJS Engineer",medior,"['laravel', 'vue', 'graphql']",,,https://anotherurl.com//jobs/435599/medior-engineer,,,

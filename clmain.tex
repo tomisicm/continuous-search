@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt, a4paper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+% additional package for if else statemtns
+\usepackage{etoolbox}
+\providetoggle{islaravel}
+\settoggle{islaravel}{\laravelPosition}
+
+
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+
+\fontdir[fonts/] % Specify the location of the included fonts
+
+% Color for highlights
+\colorlet{awesome}{awesome-skyblue} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+\name{John}{Doe}
+\address{John Doe Address, Street, Number}
+\mobile{(+382) 063 1204 323}
+
+\email{egemail@gmail.com}
+%\homepage{www.posquit0.com}
+\github{yourgithub}
+%\linkedin{your linkedin name}
+%\skype{skypeid}
+%\stackoverflow{SOid}{SOname}
+%\twitter{@twit}
+
+\position{{\normalsize Software Engineer}} % Your expertise/fields
+\quote{``Your favourite quote.``} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+
+%% running this puppy with following command
+%lualatex '\def\company{Test company }\input clmain.tex'
+
+\recipient{To Whom It May Concern,}{\company
+\\ } % The company being applied to
+
+%\recipient{Company Recruitment Team}{Initech Inc.\\4120 Freidrich Ln.\\Austin, TX 78744} % The company being applied to
+
+%% \recipient{To Whom It May Concern,}{\company
+%% \\} % The company being applied to
+
+\letterdate{\today} % The date on the letter, default is the date of compilation
+
+%\lettertitle{Job Application for Node Developer,} % The title of the letter
+\lettertitle{Job Application for \jobPosition Developer,} % make configurable
+
+\letteropening{Dear Mr./Ms,} % How the letter is opened
+
+\letterclosing{Sincerely,} % How the letter is closed
+
+\letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+\makecvfooter{\today}{{Your Name}~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+%\lettersection{About Me}
+
+%This letter is to express my interest the position of Software Developer.
+
+% a paragraph where you are expressing interes for a postion
+Example paragraph whre I am expressing my interest for the position. Example paragraph whre I am expressing my interest for the position.
+
+\iftoggle{islaravel}{
+    This paragraph will be show iflaravel parameter is true.
+}
+{
+    This paragraph will be show iflaravel parameter is false.
+}
+
+Some other paragraph.
+
+%------------------------------------------------
+
+%\lettersection{Why Me?}
+
+There is where you say you are good fit.
+
+%------------------------------------------------
+
+Some additional paragraph.
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}
